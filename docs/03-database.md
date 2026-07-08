@@ -192,7 +192,6 @@ Cada tipo de actuador tendrá asociados uno o varios estados posibles.
 | actuator_type_id | bigint    |
 | code             | string    |
 | name             | string    |
-| display_order    | integer   |
 | created_at       | timestamp |
 | updated_at       | timestamp |
 

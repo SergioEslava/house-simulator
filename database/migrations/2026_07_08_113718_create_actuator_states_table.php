@@ -11,18 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sensors', function (Blueprint $table) {
+        Schema::create('actuator_states', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('zone_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('sensor_type_id')->constrained()->restrictOnDelete();
+            $table->foreignId('actuator_type_id')->constrained()->cascadeOnDelete();
 
+            $table->string('code');
             $table->string('name');
-            $table->boolean('enabled')->default(true);
 
             $table->timestamps();
 
-            $table->unique(['zone_id','name']);
+            $table->unique(['actuator_type_id','code']);
         });
     }
 
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sensors');
+        Schema::dropIfExists('actuator_states');
     }
 };

@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sensors', function (Blueprint $table) {
+        Schema::create('actuators', function (Blueprint $table) {
             $table->id();
 
             $table->foreignId('zone_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('sensor_type_id')->constrained()->restrictOnDelete();
+            $table->foreignId('actuator_type_id')->constrained()->restrictOnDelete();
+            $table->foreignId('actuator_state_id')->constrained()->restrictOnDelete();
 
             $table->string('name');
-            $table->boolean('enabled')->default(true);
 
             $table->timestamps();
 
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sensors');
+        Schema::dropIfExists('actuators');
     }
 };
