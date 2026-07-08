@@ -23,6 +23,8 @@ return new class extends Migration
             $table->timestamps();
 
             $table->unique(['zone_id','name']);
+
+            $table->index(['zone_id','actuator_type_id','actuator_state_id']);
         });
     }
 

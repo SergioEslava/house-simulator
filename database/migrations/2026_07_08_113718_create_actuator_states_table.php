@@ -22,6 +22,8 @@ return new class extends Migration
             $table->timestamps();
 
             $table->unique(['actuator_type_id','code']);
+
+            $table->index('actuator_type_id');
         });
     }
 
