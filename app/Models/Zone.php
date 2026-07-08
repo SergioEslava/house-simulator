@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Zone extends Model
+final class Zone extends Model
 {
     /** @use HasFactory<\Database\Factories\ZoneFactory> */
     use HasFactory;
