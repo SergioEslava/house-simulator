@@ -95,6 +95,7 @@ Define el comportamiento común de cada tipo de sensor.
 | Campo                     | Tipo      |
 | ------------------------- | --------- |
 | id                        | bigint    |
+| code                      | string    |
 | name                      | string    |
 | unit                      | string    |
 | sampling_interval_seconds | integer   |
@@ -165,6 +166,7 @@ Define los distintos tipos de actuadores soportados por el sistema.
 | Campo      | Tipo      |
 | ---------- | --------- |
 | id         | bigint    |
+| code       | string    |
 | name       | string    |
 | created_at | timestamp |
 | updated_at | timestamp |
@@ -192,7 +194,6 @@ Cada tipo de actuador tendrá asociados uno o varios estados posibles.
 | actuator_type_id | bigint    |
 | code             | string    |
 | name             | string    |
-| display_order    | integer   |
 | created_at       | timestamp |
 | updated_at       | timestamp |
 
@@ -328,8 +329,10 @@ Durante la instalación del proyecto se crearán automáticamente los siguientes
 
 ## Tipos de actuadores
 
-* Light.
+* Lamp.
 * Blind.
+* Ceiling Light.
+* Door.
 
 ## Estados de actuadores
 
@@ -344,6 +347,11 @@ Durante la instalación del proyecto se crearán automáticamente los siguientes
 * Down.
 * Moving.
 
+### Door
+
+* Open
+* Closed
+
 ## Sensores
 
 * 4 sensores de temperatura.
@@ -353,6 +361,7 @@ Durante la instalación del proyecto se crearán automáticamente los siguientes
 
 * 7 luces.
 * 5 persianas.
+* 2 puertas
 
 ---
 

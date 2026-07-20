@@ -166,9 +166,25 @@ Características:
 
 # Tipos de actuadores
 
-## Light
+## Lamp
 
-Representa cualquier sistema de iluminación.
+Representa un sistema de iluminación de pie.
+
+Estados permitidos:
+
+* `off`
+* `on`
+
+Operaciones:
+
+* Consultar estado.
+* Modificar estado.
+
+---
+
+## Ceiling Light
+
+Representa un sistema de iluminación central de una habitación.
 
 Estados permitidos:
 
@@ -191,6 +207,22 @@ Estados permitidos:
 * `up`
 * `down`
 * `moving`
+
+Operaciones:
+
+* Consultar estado.
+* Modificar estado.
+
+---
+
+## Door
+
+Representa una puerta con cierre electrónico.
+
+Estados permitidos:
+
+* `open`
+* `closed`
 
 Operaciones:
 
