@@ -21,7 +21,7 @@ return new class extends Migration
 
             $table->timestamps();
 
-            $table->index(['sensor_id','recorded_at']);
+            $table->index(['recorded_at']);
         });
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types= 1);
+declare(strict_types=1);
 
 namespace App\Models;
 
@@ -14,6 +14,7 @@ final class ActuatorType extends Model
     use HasFactory;
 
     protected $fillable = [
+        "code",
         "name",
     ];
 

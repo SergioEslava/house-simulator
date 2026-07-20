@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('sensor_types', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name')->unique();
+            $table->string('code');
+            $table->string('name');
             $table->string('unit', 10);
             $table->unsignedInteger('sampling_interval_seconds');
 

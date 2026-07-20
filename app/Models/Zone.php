@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types= 1);
+declare(strict_types=1);
 
 namespace App\Models;
 
@@ -15,6 +15,7 @@ final class Zone extends Model
     use HasFactory;
 
     protected $fillable = [
+        "house_id",
         "name",
         "description",
     ];

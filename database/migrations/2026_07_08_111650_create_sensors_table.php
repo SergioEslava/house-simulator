@@ -23,8 +23,6 @@ return new class extends Migration
             $table->timestamps();
 
             $table->unique(['zone_id','name']);
-
-            $table->index(['zone_id','sensor_type_id']);
         });
     }
 
